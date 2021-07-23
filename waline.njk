@@ -1,0 +1,26 @@
+{{ next_data('waline', {
+  lang: page.lang | default('zh-CN', true)
+}, config.waline, {
+  el: '#waline-comments',
+  libUrl: config.waline.libUrl | default('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', true),
+  path: url_for(page.path) | replace(r/index\.html$/, ''),
+  avatarCDN: config.waline.avatarCDN | default('https://cdn.v2ex.com/gravatar/', true),
+  dark: config.waline.dark | default('auto', true),
+  copyright: config.waline.copyright,
+  qiniuDebug: config.waline.qiniuDebug,
+  qiniuDomain: config.waline.qiniuDomain,
+  qiniuTokenUrl: config.waline.qiniuTokenUrl,
+  login: config.waline.login | default('auto', '')
+}) }}
+<script>
+document.addEventListener('page:loaded', () => {
+  if(CONFIG.waline.qiniuDomain && CONFIG.waline.qiniuTokenUrl){
+    CONFIG.waline.uploadImage = qiniuUploadImage;
+  }
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>

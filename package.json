@@ -1,0 +1,21 @@
+{
+  "name": "hexo-waline-next",
+  "version": "2.2.2",
+  "description": "Waline plugin for NexT theme.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rqh656418510/hexo-waline-next"
+  },
+  "keywords": [
+    "Hexo",
+    "NexT",
+    "Waline"
+  ],
+  "author": "rqh656418510",
+  "license": "MIT",
+  "homepage": "https://github.com/rqh656418510/hexo-waline-next#readme",
+  "dependencies": {
+    "@next-theme/utils": "^1.2.0"
+  }
+}

@@ -1,0 +1,135 @@
+{%- if config.waline.qiniuDomain and config.waline.qiniuTokenUrl %}
+  <script src="https://unpkg.com/qiniu-js@3.3.1/dist/qiniu.min.js"></script>
+  <script>
+    var qiniu_domain = "{{ config.waline.qiniuDomain }}";
+    var qiniu_token_url = "{{ config.waline.qiniuTokenUrl }}";
+    var qiniu_debug = "true" === "{{ config.waline.qiniuDebug }}";
+
+    // date format
+    Date.prototype.format = function (fmt) {
+      var o = {
+        "M+": this.getMonth() + 1,
+        "d+": this.getDate(),
+        "h+": this.getHours(),
+        "m+": this.getMinutes(),
+        "s+": this.getSeconds(),
+        "q+": Math.floor((this.getMonth() + 3) / 3),
+        "S": this.getMilliseconds()
+      };
+      if (/(y+)/.test(fmt)) {
+        fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+      }
+      for (var k in o) {
+        if (new RegExp("(" + k + ")").test(fmt)) {
+          fmt = fmt.replace(
+            RegExp.$1,
+            (RegExp.$1.length == 1)
+              ? (o[k])
+              : (("00" + o[k]).substr(("" + o[k]).length))
+          );
+        }
+      }
+      return fmt;
+    }
+
+    // generate uuid
+    function uuid() {
+      var s = [];
+      var hexDigits = "0123456789abcdef";
+      for (var i = 0; i < 36; i++) {
+        s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+      }
+      s[14] = "4";
+      s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);
+      s[8] = s[13] = s[18] = s[23] = "-";
+      var uuid = s.join("");
+      return uuid;
+    }
+
+    // sync get request
+    function syncGet(url) {
+      var xhr = null;
+      if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest();
+      } else {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xhr.open('GET', url, false);
+      xhr.send();
+      return xhr;
+    }
+
+    // get upload file path
+    function getUploadFilePath() {
+      var now = new Date();
+      var name = uuid().replace(/-/g, "");
+      var nowStr = now.format("/yyyy/MM/dd/");
+      return "uploads" + nowStr + name;
+    }
+
+    // get qiniu upload token
+    function getUploadToken() {
+      try {
+        var xhr = syncGet(qiniu_token_url);
+        var responseStatus = xhr.status;
+        var responseJson = JSON.parse(xhr.responseText);
+        if (responseStatus === 200) {
+          return responseJson.data;
+        } else if (responseStatus === 403) {
+          alert(responseJson.msg || "图片上传失败，无法获取UploadToken，非法请求来源！");
+        } else if (responseStatus === 429) {
+          alert(responseJson.msg || "图片上传失败，无法获取UploadToken，上传过于频繁！");
+        } else if (responseStatus === 500) {
+          alert(responseJson.msg || "图片上传失败，无法获取UploadToken，系统内部出错！");
+        } else {
+          alert("图片上传失败，无法获取UploadToken，未知Http响应状态码！");
+        }
+      } catch (err) {
+        if (qiniu_debug) {
+          console.error(err);
+        }
+        alert("图片上传失败，无法获取UploadToken，未知错误！");
+      }
+      return null;
+    }
+
+    // qiniu upload image
+    async function qiniuUploadImage(file) {
+      var image_path = null;
+      await uploadImage(file).then(function onFulfilled(res) {
+        image_path = res;
+      }).catch(function onRejected(err) {
+        if (qiniu_debug) {
+          console.error(err);
+        }
+      });
+      return image_path;
+    }
+
+    // upload image
+    function uploadImage(file) {
+      return new Promise((resolve, reject) => {
+        var config = null;
+        var putExtra = null;
+        var token = getUploadToken();
+        var key = getUploadFilePath();
+        // upload init
+        var observable = qiniu.upload(file, key, token, putExtra, config);
+        // upload start
+        observable.subscribe({
+          next(res) {
+            // upload progress
+          },
+          error(err) {
+            // upload falied
+            reject("falied to upload image for qiniu: " + err.name);
+          },
+          complete(res) {
+            // upload successed
+            resolve(qiniu_domain + "/" + key);
+          }
+        });
+      });
+    }
+  </script>
+{%- endif %}

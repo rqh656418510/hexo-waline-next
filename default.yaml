@@ -1,0 +1,17 @@
+# Waline
+# For more information: https://waline.js.org, https://github.com/walinejs/waline
+waline:
+  enable: false
+  serverURL: https://waline.vercel.app # Waline server address url
+  placeholder: Just go go # Comment box placeholder
+  dark: auto # Dark mode
+  avatar: mm # Gravatar style
+  meta: [nick, mail, link] # Custom comment header
+  pageSize: 10 # Pagination size
+  #lang: # Language, available values: en, zh-cn
+  # Warning: Do not enable both `waline.visitor` and `leancloud_visitors`.
+  visitor: false # Article reading statistic
+  comment_count: true # If false, comment count will only be displayed in post page, not in home page
+  requiredMeta: [] # Set required fields: [nick] | [nick, mail]
+  copyright: true # Display the footer copyright information
+  login: '' # Force waline client to login, available value: force
