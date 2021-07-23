@@ -3,7 +3,7 @@
 ![Theme Version](https://img.shields.io/badge/NexT-v7.3.0+-blue?style=flat-square)
 ![npm](https://img.shields.io/npm/v/@waline/hexo-next?style=flat-square)
 
-Waline comment system for NexT. Waline is a simple, safe comment system inspired by Valine.
+Waline plugin for NexT theme. Waline is a simple, safe comment system inspired by Valine.
 
 ## Install
 
