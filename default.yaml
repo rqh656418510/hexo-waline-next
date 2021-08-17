@@ -15,3 +15,4 @@ waline:
   requiredMeta: [] # Set required fields: [nick] | [nick, mail]
   copyright: true # Display the footer copyright information
   login: '' # Force waline client to login, available value: force
+  allowUploadImage: true # Allow upload image

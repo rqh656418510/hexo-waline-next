@@ -1,3 +1,18 @@
+# (2021-08-17)
+
+### Version
+
+- 2.2.3
+
+### Features
+
+- add options to disable upload pictures by client
+
+``` yml
+waline:
+  allowUploadImage: true        # Allow upload image
+```
+
 # (2021-07-23)
 
 ### Version

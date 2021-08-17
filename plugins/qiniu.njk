@@ -1,4 +1,4 @@
-{%- if config.waline.qiniuDomain and config.waline.qiniuTokenUrl %}
+{%- if config.waline.allowUploadImage and config.waline.qiniuDomain and config.waline.qiniuTokenUrl %}
   <script src="https://unpkg.com/qiniu-js@3.3.1/dist/qiniu.min.js"></script>
   <script>
     var qiniu_domain = "{{ config.waline.qiniuDomain }}";

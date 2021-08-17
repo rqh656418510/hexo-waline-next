@@ -10,13 +10,18 @@
   qiniuDebug: config.waline.qiniuDebug,
   qiniuDomain: config.waline.qiniuDomain,
   qiniuTokenUrl: config.waline.qiniuTokenUrl,
-  login: config.waline.login | default('auto', '')
+  allowUploadImage: config.waline.allowUploadImage | default(true, true),
+  login: config.waline.login | default('', true)
 }) }}
 <script>
 document.addEventListener('page:loaded', () => {
-  if(CONFIG.waline.qiniuDomain && CONFIG.waline.qiniuTokenUrl){
+  if(!CONFIG.waline.allowUploadImage) {
+    CONFIG.waline.uploadImage = false;
+  }
+  else if(CONFIG.waline.qiniuDomain && CONFIG.waline.qiniuTokenUrl) {
     CONFIG.waline.uploadImage = qiniuUploadImage;
   }
+
   NexT.utils.loadComments(CONFIG.waline.el).then(() =>
     NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
   ).then(() => {

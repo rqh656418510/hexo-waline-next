@@ -1,21 +1,51 @@
 {
-  "name": "hexo-waline-next",
-  "version": "2.2.2",
-  "description": "Waline plugin for NexT theme.",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rqh656418510/hexo-waline-next"
+  "_from": "hexo-waline-next@^2.2.2",
+  "_id": "hexo-waline-next@2.2.3",
+  "_inBundle": false,
+  "_integrity": "sha512-qyQ61QjSUyzaOYDhMXZ1NzjZoFksnRCkK1KfhY//95D7LeOpzYaSQffW6Xfrvb6sC3YeO66H65aUly0K0z6ViQ==",
+  "_location": "/hexo-waline-next",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "hexo-waline-next@^2.2.2",
+    "name": "hexo-waline-next",
+    "escapedName": "hexo-waline-next",
+    "rawSpec": "^2.2.2",
+    "saveSpec": null,
+    "fetchSpec": "^2.2.2"
   },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/hexo-waline-next/-/hexo-waline-next-2.2.2.tgz",
+  "_shasum": "59bda025a1f4da2a2ffd5f835b3d6357a3f7d016",
+  "_spec": "hexo-waline-next@^2.2.2",
+  "_where": "/home/rqh656418510/HDDD/Workspaces_MarkDown/hexo-develop",
+  "author": {
+    "name": "rqh656418510"
+  },
+  "bugs": {
+    "url": "https://github.com/rqh656418510/hexo-waline-next/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@next-theme/utils": "^1.2.0"
+  },
+  "deprecated": false,
+  "description": "Waline plugin for NexT theme.",
+  "homepage": "https://github.com/rqh656418510/hexo-waline-next#readme",
   "keywords": [
     "Hexo",
     "NexT",
     "Waline"
   ],
-  "author": "rqh656418510",
   "license": "MIT",
-  "homepage": "https://github.com/rqh656418510/hexo-waline-next#readme",
-  "dependencies": {
-    "@next-theme/utils": "^1.2.0"
-  }
+  "main": "index.js",
+  "name": "hexo-waline-next",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rqh656418510/hexo-waline-next.git"
+  },
+  "version": "2.2.2"
 }
