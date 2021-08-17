@@ -10,7 +10,7 @@
 
 ``` yml
 waline:
-  allowUploadImage: true        # Allow upload image
+  allowUploadImage: true        # Allow upload picture
 ```
 
 # (2021-07-23)

@@ -44,6 +44,7 @@ waline:
   qiniuDebug: false # print the error message of the picture uploaded by qiniu
   qiniuDomain: # The custom domain for qiniu, e.g https://qiniu.example.cn
   qiniuTokenUrl: # The api to get qiniu upload token, e.g https://api.example.cn/qiniu/sdk/token/upload
+  allowUploadImage: true # Allow upload picture
   login: '' # Force waline client to login, available value: force
 ```
 
