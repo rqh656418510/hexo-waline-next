@@ -10,7 +10,7 @@
   qiniuDebug: config.waline.qiniuDebug,
   qiniuDomain: config.waline.qiniuDomain,
   qiniuTokenUrl: config.waline.qiniuTokenUrl,
-  login: config.waline.login | default('auto', '')
+  login: config.waline.login | default('', true)
 }) }}
 <script>
 document.addEventListener('page:loaded', () => {
