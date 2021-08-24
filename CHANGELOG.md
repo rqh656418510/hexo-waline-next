@@ -1,8 +1,8 @@
-# (2021-08-17)
+# (2021-08-25)
 
 ### Version
 
-- 2.2.3
+- 2.2.4
 
 ### Features
 
@@ -12,6 +12,16 @@
 waline:
   allowUploadImage: true        # Allow upload picture
 ```
+
+# (2021-08-24)
+
+### Version
+
+- 2.2.3
+
+### Bug Fixes
+
+- fix force waline client to login
 
 # (2021-07-23)
 
