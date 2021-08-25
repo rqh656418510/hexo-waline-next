@@ -1,3 +1,13 @@
+# (2021-08-25)
+
+### Version
+
+- 2.2.4
+
+### Bug Fixes
+
+- fix invalid meta setting
+
 # (2021-08-24)
 
 ### Version
