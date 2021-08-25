@@ -1,8 +1,8 @@
-# (2021-08-25)
+# (2021-08-26)
 
 ### Version
 
-- 2.2.4
+- 2.2.5
 
 ### Features
 
@@ -12,6 +12,16 @@
 waline:
   allowUploadImage: true        # Allow upload picture
 ```
+
+# (2021-08-25)
+
+### Version
+
+- 2.2.4
+
+### Bug Fixes
+
+- fix invalid meta setting
 
 # (2021-08-24)
 

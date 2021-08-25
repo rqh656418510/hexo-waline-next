@@ -6,7 +6,6 @@ waline:
   placeholder: Just go go # Comment box placeholder
   dark: auto # Dark mode
   avatar: mm # Gravatar style
-  meta: [nick, mail, link] # Custom comment header
   pageSize: 10 # Pagination size
   #lang: # Language, available values: en, zh-cn
   # Warning: Do not enable both `waline.visitor` and `leancloud_visitors`.
