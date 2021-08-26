@@ -1,3 +1,13 @@
+# (2021-08-27)
+
+### Version
+
+- 2.2.6
+
+### Features
+
+- update options to use libravatar
+
 # (2021-08-26)
 
 ### Version

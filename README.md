@@ -30,7 +30,7 @@ waline:
   serverURL: https://waline.vercel.app # Waline server address url
   placeholder: Just go go # Comment box placeholder
   dark: auto # Dark mode css selector, for more information: https://waline.js.org/client/basic.html#dark
-  avatar: mm # Gravatar style
+  avatar: robohash # Avatar style
   meta: [nick, mail, link] # Custom comment header
   pageSize: 10 # Pagination size
   lang: # Language, available values: en, zh-cn
@@ -39,7 +39,7 @@ waline:
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
   requiredMeta: [] # Set required fields: [nick] | [nick, mail]
   libUrl: # Set custom waline cdn url
-  avatarCDN: # Set custom gravatar cdn url
+  avatarCDN: # Set custom avatar cdn url
   copyright: true # Display the footer copyright information
   qiniuDebug: false # print the error message of the picture uploaded by qiniu
   qiniuDomain: # The custom domain for qiniu, e.g https://qiniu.example.cn
