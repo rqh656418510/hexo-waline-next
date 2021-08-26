@@ -4,7 +4,6 @@ waline:
   enable: false
   serverURL: https://waline.vercel.app # Waline server address url
   placeholder: Just go go # Comment box placeholder
-  dark: auto # Dark mode
   avatar: robohash # Avatar style
   pageSize: 10 # Pagination size
   #lang: # Language, available values: en, zh-cn
@@ -13,5 +12,4 @@ waline:
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
   requiredMeta: [] # Set required fields: [nick] | [nick, mail]
   copyright: true # Display the footer copyright information
-  login: '' # Force waline client to login, available value: enable, disable, force
   allowUploadImage: true # Allow upload picture
