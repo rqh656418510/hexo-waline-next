@@ -56,7 +56,7 @@ waline:
 
 ``` yml
 waline:
-  login: 'force'        # Force waline client to login, available value: force
+  login: 'force'        # Force waline client to login, available value: enable, disable, force
 ```
 
 # (2021-07-04)
