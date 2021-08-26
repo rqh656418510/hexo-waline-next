@@ -64,6 +64,4 @@ waline:
 
 ## Blog
 
-- [NexT how to add dark mode](https://www.techgrow.cn/posts/abf4aee1.html)
-- [NexT and Waline how to add dark mode](https://www.techgrow.cn/posts/ae18fb85.html#启用暗黑模式)
 - [Waline how to upload pictures to qiniu](https://www.techgrow.cn/posts/ae18fb85.html#上传评论图片)
