@@ -13,5 +13,5 @@ waline:
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
   requiredMeta: [] # Set required fields: [nick] | [nick, mail]
   copyright: true # Display the footer copyright information
-  login: '' # Force waline client to login, available value: force
+  login: '' # Force waline client to login, available value: enable, disable, force
   allowUploadImage: true # Allow upload picture
