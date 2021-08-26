@@ -14,7 +14,7 @@ npm install hexo-waline-next --save
 ## Feature
 
 - dark mode
-- custom gravatar cdn url
+- custom avatar cdn url
 - upload pictures to [qiniu](https://www.qiniu.com)
 - force waline client to login
 
