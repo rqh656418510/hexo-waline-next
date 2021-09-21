@@ -5,8 +5,7 @@
   libUrl: config.waline.libUrl | default('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', true),
   path: url_for(page.path) | replace(r/index\.html$/, ''),
   login: config.waline.login | default('', true),
-  dark: config.waline.dark | default('auto', true),
-  avatarCDN: config.waline.avatarCDN | default('https://seccdn.libravatar.org/avatar/', true)
+  dark: config.waline.dark | default('auto', true)
 }) }}
 <script>
 document.addEventListener('page:loaded', () => {

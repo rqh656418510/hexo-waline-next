@@ -1,3 +1,13 @@
+# (2021-09-21)
+
+### Version
+
+- 2.2.8
+
+### Features
+
+- remove `avatar`, `avatarCDN` configuration for client
+
 # (2021-08-27)
 
 ### Version
