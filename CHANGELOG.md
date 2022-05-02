@@ -1,4 +1,16 @@
-# (2022-04-26)
+# (2022-05-02)
+
+### Version
+
+- 3.0.0
+
+### Features
+
+- upgrade with waline client v2.x
+
+### BREAKING CHANGES
+
+- not compatible with waline client v1.x
 
 ### Version
 
