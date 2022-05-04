@@ -1,6 +1,6 @@
 {
   "name": "hexo-waline-next",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Waline plugin for NexT theme.",
   "main": "index.js",
   "repository": {
