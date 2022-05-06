@@ -119,3 +119,7 @@ waline:
 ## Blog
 
 - [Waline how to upload pictures to qiniu](https://www.techgrow.cn/posts/ae18fb85.html#上传图片至七牛图床)
+
+## Plan
+
+- Support Aliyun OSS
