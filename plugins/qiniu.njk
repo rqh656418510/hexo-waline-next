@@ -1,5 +1,11 @@
 {%- if config.waline.allowUploadImage and config.waline.qiniuDomain and config.waline.qiniuTokenUrl %}
-  <script src="https://unpkg.com/qiniu-js@3.3.1/dist/qiniu.min.js"></script>
+
+  {%- if config.waline.qiniuLibUrl %}
+    <script src="{{ config.waline.qiniuLibUrl }}"></script>
+  {%- else %}
+    <script src="https://cdn.jsdelivr.net/npm/qiniu-js@3.3.1/dist/qiniu.min.js"></script>
+  {%- endif %}
+  
   <script>
     var qiniu_domain = "{{ config.waline.qiniuDomain }}";
     var qiniu_token_url = "{{ config.waline.qiniuTokenUrl }}";

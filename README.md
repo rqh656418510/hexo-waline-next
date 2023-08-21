@@ -92,6 +92,9 @@ waline:
 
   # The api to get qiniu token
   qiniuTokenUrl: https://api.example.cn/qiniu/sdk/token/upload
+
+  # The custom library url for qiniu javascript sdk
+  # qiniuLibUrl: https://cdn.jsdelivr.net/npm/qiniu-js@3.3.1/dist/qiniu.min.js
 ```
 
 ## Qiniu Token API Return Data Description

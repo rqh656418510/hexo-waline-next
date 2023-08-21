@@ -1,3 +1,13 @@
+# (2023-08-21)
+
+### Version
+
+- 3.0.2
+
+### Features
+
+- support custom library url for qiniu javascript sdk
+
 # (2022-05-02)
 
 ### Version
